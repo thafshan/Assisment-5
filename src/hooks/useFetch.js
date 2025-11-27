@@ -1,6 +1,9 @@
 import { useState, useEffect ,} from "react";
+// importing statement
+// usestate kia ha Data loading
 
 function useFetch(url) {
+  // custom hook jo argument URL pass kar raha ha . 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,6 +19,7 @@ function useFetch(url) {
         setData(json);
       } catch (err) {
         setError("Please Re-Try Fetching Data...");
+        // load wala message
       } finally {
         setLoading(false);
       }
