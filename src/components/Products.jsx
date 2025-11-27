@@ -11,7 +11,7 @@ export default function Products() {
     return (
       <div className="center">
         <div className="loader" /> {/* CSS spinner */}
-        <p>Loading products...</p>
+        <p>Loading the products...</p>
       </div>
     );
   }
@@ -19,14 +19,14 @@ export default function Products() {
   if (error) {
     return (
       <div className="center">
-        <p>Error: {error}</p>
-        <button onClick={refetch}>Retry</button>
+        <p>Error in Loading: {error}</p>
+        <button onClick={refetch}>Retry Again</button>
       </div>
     );
   }
 
   if (!data || data.length === 0) {
-    return <p>No products found.</p>;
+    return <p>Sorry No products found.</p>;
   }
 
   return (
